@@ -59,6 +59,7 @@ p {
 .cta {
 	cursor:pointer;
 	position:relative;
+	color: darkblue;
 	font-size:28px;
 	border-top-right-radius:10px;
 	border-bottom-left-radius:10px;
