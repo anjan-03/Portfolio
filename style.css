@@ -57,28 +57,50 @@ p {
 }
 
 .cta {
-	display: inline-block;
-	padding: 10px 30px;
-	color: white;
-	background-color: transparent;
-	border: 3px solid crimson;
-	font-size: 2rem;
-	text-transform: uppercase;
-	margin-top: 10px;
-	transition: 0.3s ease;
-	transition-property: background-color, color;
+	cursor:pointer;
+	position:relative;
+	font-size:28px;
+	border-top-right-radius:10px;
+	border-bottom-left-radius:10px;
+	transition: all 1s;
+}
+
+.cta:after, .cta:before {
+  content: " ";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transition: all 1s;
+}
+.cta:after {
+  top: -2px;
+  left: -2px;
+  border-top: 3px solid crimson;
+  border-left: 3px solid crimson;
+}
+.cta:before {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 3px solid crimson;
+  border-right: 3px solid crimson;
+}
+.cta:hover {
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.cta:hover:before, .cta:hover:after {
+  width: 100%;
+  height: 100%;
 }
 
 .cta:hover {
 	color: wheat;
-	background-color: crimson;
 	cursor: pointer;
 }
 
 .brand h1 {
 	font-size: 3rem;
 	margin-bottom: 10px;
-	color: white;
 }
 
 .brand h1 span {
