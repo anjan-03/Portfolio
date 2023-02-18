@@ -300,13 +300,13 @@ p {
 /* Services Section*/
 
 .cont {
+	padding: 80px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	justify-content: center;
 	align-items: center;
 	text-align: center;
 	grid-gap: 1rem;
-	padding: 1rem 80px;
 	font-size: 1.2rem;
 }
 
@@ -442,7 +442,7 @@ p {
 
 .exp-service {
 	width: 100%;
-	padding: 100px 0px;
+	padding: 40px 0px;
 }
 
 .exp-title h6 {
@@ -493,7 +493,6 @@ p {
 
 #contact .contact-item {
 	width: 80%;
-	padding: 20px;
 	text-align: center;
 	border-radius: 10px;
 	padding: 30px;
@@ -503,7 +502,6 @@ p {
 	align-items: center;
 	flex-direction: column;
 	box-shadow: 0px 0px 18px 0 #0000002c;
-	transition: 0.3s ease box-shadow;
 }
 
 #contact .contact-item:hover {
@@ -519,7 +517,7 @@ p {
 
 #contact .contact-info h1 {
 	font-size: 2.5rem;
-	font-weight: 500;
+	font-weight: 550;
 	margin-bottom: 5px;
 }
 
@@ -538,24 +536,21 @@ p {
 }
 
 #footer .footer {
-	min-height: 200px;
+	min-height: 50px;
 	flex-direction: column;
-	padding-top: 50px;
-	padding-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 3px;
 }
 
 #footer h2 {
 	color: white;
 	font-weight: 500;
 	font-size: 1.8rem;
-	letter-spacing: 0.1rem;
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 
 #footer .social-icon {
 	display: flex;
-	margin-bottom: 30px;
+	margin-bottom: 5px;
 }
 
 #footer .social-item {
@@ -683,11 +678,11 @@ p {
 	}
 	
 	#about .about .col-left .about-img::after {
-		left: -9px;
+		left: -6px;
 		top: -10px;
 		height: 100%;
 		width: 100%;
-		border: 10px solid crimson;
+		border: 7px solid crimson;
 	}
 	
 	#about .col-right {
