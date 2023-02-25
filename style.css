@@ -94,11 +94,6 @@ p {
   height: 100%;
 }
 
-.cta:hover {
-	color: wheat;
-	cursor: pointer;
-}
-
 .brand h1 {
 	font-size: 3rem;
 	margin-bottom: 10px;
