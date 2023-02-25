@@ -86,8 +86,8 @@ p {
   border-right: 3px solid crimson;
 }
 .cta:hover {
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 .cta:hover:before, .cta:hover:after {
   width: 100%;
@@ -117,7 +117,7 @@ p {
 #header .header {
 	min-height: 8vh;
 	background-color: rgba(31, 30, 30, 0.24);
-	transition: 0.3s ease background-color;
+	transition: 0.3s background-color;
 }
 
 #header .nav-bar {
@@ -144,11 +144,7 @@ p {
 	align-items: center;
 	z-index: 1;
 	overflow-x: hidden;
-	transition: 0.5s ease left;
-}
-
-#header .nav-list ul.active {
-	left: 0%;
+	transition: 0.5s left;
 }
 
 #header .nav-list ul a {
@@ -172,12 +168,7 @@ p {
 	font-size: 13rem;
 	letter-spacing: 50px;
 	z-index: -1;
-	transition: 0.3s ease letter-spacing;
-}
-
-#header .nav-list ul li:hover a::after {
-	transform: translate(-50%, -50%) scale(1);
-	letter-spacing: initial;
+	transition: 0.3s letter-spacing;
 }
 
 #header .nav-list ul li:hover a {
@@ -207,7 +198,7 @@ p {
 	width: 100%;
 	border-radius: 50%;
 	border: 3px solid white;
-	animation: hamburger_puls 1s ease infinite;
+	animation: hamburger_puls 1s infinite;
 }
 
 #header .hamburger .bar {
@@ -225,7 +216,7 @@ p {
 	width: 100%;
 	left: 0;
 	background-color: white;
-	transition: 0.3s ease;
+	transition: 0.3s;
 	transition-property: top, bottom;
 }
 
@@ -265,7 +256,6 @@ p {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 50px;
-	justify-content: flex-start;
 }
 
 #hero h1 {
@@ -274,7 +264,7 @@ p {
 	font-size: 4rem;
 	position: relative;
 	color: transparent;
-	animation: text_reveal 0.5s ease forwards;
+	animation: text_reveal 0.5s forwards;
 	animation-delay: 1s;
 }
 
@@ -287,7 +277,7 @@ p {
 }
 
 #hero h1:nth-child(3) {
-	animation: text_reveal_name 0.5s ease forwards;
+	animation: text_reveal_name 0.5s forwards;
 	animation-delay: 3s;
 }
 
@@ -297,8 +287,8 @@ p {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color:darkgoldenrod;
-	animation: text_reveal_box 1s ease;
+	background-color:rgb(192, 148, 39);
+	animation: text_reveal_box 1s;
 	animation-delay: 0.5s;
 }
 
@@ -315,87 +305,6 @@ p {
 }
 
 /* End Hero Section */
-
-/* Services Section*/
-
-.cont {
-	padding: 80px;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	grid-gap: 1rem;
-	font-size: 1.2rem;
-}
-
-.skills-title {
-	font-size: 1.9rem;
-	font-weight: 100;
-	color: black;
-	text-transform: uppercase;
-}
-.skills-title span {
-	color: crimson;
-}
-
-.skill-box {
-	padding: 1rem;
-	color:darkmagenta;
-	cursor: pointer;
-}
-
-.skill-title {
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 0.5rem;
-	margin-bottom: 0.5rem;
-}
-
-/* End Services Section */
-
-/* achievements section */
-
-#achievements .achievements {
-	flex-direction: column;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 100px 0;
-}
-
-#achievements .all-achievements {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-}
-
-#achievements .achievement-info {
-	padding: 30px;
-	flex-basis: 50%;
-	height: 100%;
-	display: flex;
-	align-items: flex-start;
-	justify-content: center;
-	flex-direction: column;
-}
-
-#achievements .achievement-info h1 {
-	font-size: 10rem;
-	font-weight: 800;
-}
-
-.achievement-info span {
-	font-size: 2rem;
-	color: crimson;
-}
-
-#achievements .achievement-info p {
-	color: white;
-}
-
-/* End achievements section */
 
 /* About Section */
 
@@ -439,9 +348,9 @@ p {
 }
 
 #about .col-left .about-img {
+	position:relative;
 	height: 100%;
 	width: 100%;
-	position:relative;
 }
 
 #about .col-left .about-img::after {
@@ -456,11 +365,88 @@ p {
 
 /* End About Section */
 
+/* Skill Section*/
+
+.cont {
+	padding: 80px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	grid-gap: 1rem;
+	font-size: 1.2rem;
+}
+
+.skills-title {
+	font-size: 1.9rem;
+	font-weight: 100;
+	color: black;
+	text-transform: uppercase;
+}
+.skills-title span {
+	color: crimson;
+}
+
+.skill-box {
+	padding: 1rem;
+	color:darkmagenta;
+	cursor: pointer;
+}
+
+.skill-title {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+/* End Skill Section */
+
+/* achievements section */
+
+#achievements .achievements {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+
+#achievements .all-achievements {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#achievements .achievement-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#achievements .achievement-info h1 {
+	font-size: 10rem;
+	font-weight: 800;
+}
+
+.achievement-info span {
+	font-size: 2rem;
+	color: crimson;
+}
+
+/* End achievements section */
+
 /*Exp section*/
 
 .exp-service {
 	width: 100%;
-	padding: 40px 0px;
+	padding: 40px 0px 0px;
 }
 
 .exp-title h6 {
@@ -492,7 +478,7 @@ p {
 .exp-card p{
 	font-size: 16px;
 	font-weight: 90px;
-	color:rgb(141, 59, 0);
+	color:rgb(133, 57, 3);
 }
 
 /*End exp section*/
@@ -520,11 +506,11 @@ p {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: 0px 0px 18px 0 #0000002c;
+	box-shadow: 0px 0px 20px 0px #0000002c;
 }
 
 #contact .contact-item:hover {
-	box-shadow: 0px 0px 5px 0 #0000002c;
+	box-shadow: 0px 0px 5px 0px #0000002c;
 	cursor: pointer;
 }
 
@@ -564,7 +550,7 @@ p {
 #footer h2 {
 	color: white;
 	font-weight: 500;
-	font-size: 1.8rem;
+	font-size: 1.9rem;
 }
 
 #footer .social-icon {
@@ -580,7 +566,7 @@ p {
 
 #footer .social-item img {
 	filter: grayscale(1);
-	transition: 0.3s ease filter;
+	transition: 0.3s filter;
 }
 
 #footer .social-item:hover img {
@@ -790,13 +776,31 @@ p {
 
 	/* End header */
 
-	#services .service-bottom .service-item {
+	#Skill .service-bottom .service-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
 }
 
 @media  screen and (max-width: 990px){
+	#about .about .col-left .about-img::after {
+		left: -6px;
+		top: -5px;
+		height: 100%;
+		width: 100%;
+		border: 7px solid crimson;
+	}
+	.cta {
+		position:relative;
+		top:450px;
+	}
+	.exp-title {
+		position: relative;
+		left: -250px;
+	}
+	.section-title span {
+		font-size: 3.7rem;
+	}
 	.cont {
 		grid-template-columns: repeat(2, 1fr);
 		padding: 2rem 50px;
